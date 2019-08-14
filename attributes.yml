@@ -9,3 +9,4 @@ aws_subnets:
   - 'subnet-0c68d99bd77d3c522'
 inst_name_tag: RDGW
 asg_name: StackSet-AWS-Landing-Zone-SharedServicesRDGW-17bcc4ff-75ad-4d26-9409-ba3099dd69ec-RDGWAutoScalingGroup-1B9WM8HZPVM9B
+asg_launch_config: StackSet-AWS-Landing-Zone-SharedServicesRDGW-17bcc4ff-75ad-4d26-9409-ba3099dd69ec-RDGWLaunchConfiguration-BEFAY3RFPZL4

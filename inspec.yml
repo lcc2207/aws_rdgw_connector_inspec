@@ -23,6 +23,9 @@ inputs:
 - name: asg_name
   description: 'AutoScaling Group Name'
   type: string
+- name: asg_launch_config
+  description: 'AutoScaling Group Launch Config Name'
+  type: string
 depends:
   - name: inspec-aws
     url: https://github.com/inspec/inspec-aws/archive/master.tar.gz
