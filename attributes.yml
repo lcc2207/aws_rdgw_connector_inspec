@@ -1,2 +1,10 @@
-# Below is to be uncommented and set with your AWS Custom VPC ID:
-# aws_vpc_id: 'vpc-xxxxxxx'
+aws_vpc_id: 'vpc-0e95d91ddf4e29119'
+sshkey: 'lz_837098563121_us-east-1_2019-05-29T15-38-23'
+aws_security_group:
+  - 'StackSet-AWS-Landing-Zone-SharedServicesActiveDirectory-47dd365e-e0e2-4d81-9e5b-4b2e16510d1a-DomainMemberSG-1KRF038Y4WC1F'
+  - 'StackSet-AWS-Landing-Zone-SharedServicesRDGW-17bcc4ff-75ad-4d26-9409-ba3099dd69ec-RemoteDesktopGatewaySG-1922SUJ8YCOD'
+aws_subnets:
+  - 'subnet-006d0caaaaedb2488'
+  - 'subnet-078f7f07d73437d5e'
+  - 'subnet-0c68d99bd77d3c522'
+inst_name_tag: RDGW
