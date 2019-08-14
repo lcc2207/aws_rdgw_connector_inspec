@@ -1,9 +1,18 @@
 # InSpec Profile For aws_rdgw_connector in shared_services account
 
-## Optionally update `attributes.yml` to point to your custom VPC
+## Requies `attributes.yml` to point to your custom VPC
 
 ```
-aws_vpc_id: 'custom-vpc-id'
+aws_vpc_id: '<your vpc id>'
+sshkey: '<sshkey>'
+aws_security_group:
+  - '<SGNAME1>'
+  - '<SGNAME1>'
+aws_subnets:
+  - 'subnet-xxx'
+  - 'subnet-xx'
+  - 'subnet-xx'
+inst_name_tag: <Name>
 ```
 
 The related control will simply be skipped if this is not provided.  See the [InSpec DSL documentation](https://www.inspec.io/docs/reference/dsl_inspec/) for more details on conditional execution using `only_if`.
@@ -15,7 +24,7 @@ The related control will simply be skipped if this is not provided.  See the [In
 With a supplied VPC identifier in `attributes.yml` both of the example controls will run.  The 'aws-single-vpc-exists-check' control will only check for a VPC identifier in the currently configured AWS SDK region e.g. `eu-west-2` in the below:
 
 ```
-$ cd my-profile/
+$ cd /aws_rdgw_connector_inspec
 $ inspec exec . -t aws:// --input-file attributes.yml
 
 Profile: AWS InSpec Profile (my-profile)
