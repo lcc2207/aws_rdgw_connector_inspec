@@ -20,6 +20,9 @@ inputs:
 - name: inst_name_tag
   description: 'Instance Name Tag'
   type: string
+- name: asg_name
+  description: 'AutoScaling Group Name'
+  type: string
 depends:
   - name: inspec-aws
     url: https://github.com/inspec/inspec-aws/archive/master.tar.gz

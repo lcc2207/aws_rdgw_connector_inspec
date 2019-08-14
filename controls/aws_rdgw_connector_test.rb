@@ -3,6 +3,8 @@ sshkey = input('sshkey')
 aws_security_group = input('aws_security_group')
 aws_subnets = input('aws_subnets')
 instance_name = input('inst_name_tag')
+asg_name = input('asg_name')
+
 
 # describe aws_iam_role('alz-svm-pipelinerole') do
 #   it { should exist }
@@ -38,4 +40,10 @@ aws_ec2_instances.instance_ids.each do |instance_id|
     its('key_name') { should cmp sshkey }
     its('tags') { should include(key: 'Name', value: instance_name) }
   end
+end
+
+describe aws_auto_scaling_group(asg_name) do
+  it { should exist }
+  its('min_size') { should be 2}
+  its('max_size') { should be 2}
 end
